@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1461782418 source:c:\users\liliana\desktop\programacion\c\tp2\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1530295156 c:\users\liliana\desktop\programacion\c\tp2\tp_2_cascara\funciones.h
+
+1526572380 source:c:\users\liliana\desktop\programacion\c\tp2\tp_2_cascara\getsvalids.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"getsValids.h"
+
+1526572717 c:\users\liliana\desktop\programacion\c\tp2\tp_2_cascara\getsvalids.h
+
+1530295137 source:c:\users\liliana\desktop\programacion\c\tp2\tp_2_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"getsValids.h"
+
