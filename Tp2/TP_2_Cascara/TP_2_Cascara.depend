@@ -21,3 +21,26 @@
 	"funciones.h"
 	"getsValids.h"
 
+1526572380 source:c:\users\liliana\desktop\trabajos practicos\tp2\tp_2_cascara\getsvalids.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"getsValids.h"
+
+1526572717 c:\users\liliana\desktop\trabajos practicos\tp2\tp_2_cascara\getsvalids.h
+
+1530295572 source:c:\users\liliana\desktop\trabajos practicos\tp2\tp_2_cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"getsValids.h"
+
+1530295156 c:\users\liliana\desktop\trabajos practicos\tp2\tp_2_cascara\funciones.h
+
+1530746538 source:c:\users\liliana\desktop\trabajos practicos\tp2\tp_2_cascara\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"getsValids.h"
+

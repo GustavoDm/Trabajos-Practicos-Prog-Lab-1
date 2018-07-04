@@ -196,41 +196,81 @@ int abmPersona_ordenar(EPersona *array, int size)
 
 void grafico (EPersona *array, int size)
 {
-    int i,menor18=0,entre19y35=0,may35=0,ocupado=0;
-    for (i=0;i<size;i++)
+
+    int contador18oMenor=0;
+    int contadorEntre19y35=0;
+    int contadormayor35=0;
+    int i;
+    int j;
+    int graficoEjeY;
+
+    if(array!= NULL && size > 0)
     {
-        if(array[i].isEmpty)
+
+    for(i=0; i<size; i++)
+    {
+        if(!array[i].isEmpty)
         {
-            ocupado++;
-            if (array[i].edad < 18)
-                menor18++;
-            else if ((array[i].edad > 18) && (array[i].edad < 35))
-                entre19y35++;
-            else
-                may35++;
+
+            if (array[i].edad <= 18)
+            {
+                contador18oMenor++;
+            }
+            else if (array[i].edad > 35)
+            {
+                contadormayor35++;
+            }
+            else if(array[i].edad > 18 && array[i].edad <= 35 )
+            {
+                contadorEntre19y35++;
+            }
         }
     }
-    for (i=ocupado;i>0;i--)
+
+    if(contador18oMenor > contadorEntre19y35 && contador18oMenor > contadormayor35)
     {
-            if (i<=menor18)
-                printf("*\t");
-            else if (i<=entre19y35)
-                printf(" \t");
-
-            if (i<=entre19y35)
-                printf("*\t");
-            else if (i<=may35)
-                printf(" \t");
-
-            if ((i>menor18) && (i>entre19y35) && (i<=may35))
-                printf(" \t*");
-            else if (i<=may35)
-                printf("*");
-
-            if (i<=menor18 || i<=entre19y35 || i<=may35)
-                printf("\n");
+        graficoEjeY = contador18oMenor;
     }
-    printf("<18\t19-35\t>35\n");
+    else if(contadorEntre19y35 > contadormayor35)
+    {
+        graficoEjeY = contadorEntre19y35;
+    }
+    else
+    {
+        graficoEjeY = contadormayor35;
+    }
+
+    for (j = graficoEjeY; j > 0 ; j--)
+    {
+        if (contador18oMenor >= j)
+        {
+            printf("\t  *");
+        }
+        else
+        {
+            printf("\t   ");
+        }
+        if (contadorEntre19y35 >= j)
+        {
+            printf("\t  *");
+        }
+        else
+        {
+            printf("\t     ");
+        }
+        if (contadormayor35 >= j)
+        {
+            printf("\t  *\n");
+        }
+        else
+        {
+            printf("\t \n");
+        }
+    }
+    printf("\t<18\t19-35\t>35\n");
+
+    }
+
 }
 
 static int buscarLugarLibre(EPersona *array,int size)
